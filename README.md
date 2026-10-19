@@ -1,6 +1,6 @@
 # One
 
-One is a single HTML file. It asks for your name, then answers. The page is also a cube: flip it and the same screen arrives in a different theme. There are five, and each one commits fully.
+One is a single HTML file. It asks for your name, then answers. The page is also a cube: flip it and the same screen arrives in a different theme. There are six, and each one commits fully.
 
 Open [`index.html`](index.html). There is no build step.
 
@@ -17,6 +17,7 @@ The active theme is stored in `localStorage` under `one-theme`. Flip from the bu
 | Upside Down | `upside-down-world` | The page content rotated 180° |
 | Corporate Hell | `corporate-hell` | A cramped, gray, mandatory-training screen |
 | CRT Terminal | `crt` | Phosphor green type, scanlines, a glowing prompt |
+| Under Construction | `under-construction` | Hazard stripes, a rainbow wordmark, a blinking line, a guestbook counter |
 
 ### Candy Chaos
 
@@ -48,6 +49,12 @@ Monospace phosphor type on a dark green tube, with scanlines and a `>` prompt on
 
 ![CRT Terminal theme](docs/screenshots/crt.png)
 
+### Under Construction
+
+A homepage that never finished loading. The wordmark cycles through a rainbow, the line under it blinks, and the card sits on hazard stripes with a visitor counter and a beveled Enter button. Offline, type falls back to Comic Sans.
+
+![Under Construction theme](docs/screenshots/under-construction.png)
+
 ## After you press Enter
 
 The name is trimmed, collapsed to single spaces, and capitalized word by word (32 characters max). A ripple expands from the form, then the screen fills with the name one letter at a time and one of four greetings.
@@ -60,7 +67,7 @@ The name is trimmed, collapsed to single spaces, and capitalized word by word (3
 open index.html
 ```
 
-Typefaces load from Google Fonts. Offline, the page uses the fallback stacks already in the CSS (`Nunito`, `Impact`, `Georgia`, `Tahoma`, `ui-monospace`).
+Typefaces load from Google Fonts. Offline, the page uses the fallback stacks already in the CSS (`Nunito`, `Impact`, `Georgia`, `Tahoma`, `ui-monospace`, `Comic Sans MS`).
 
 To serve it:
 

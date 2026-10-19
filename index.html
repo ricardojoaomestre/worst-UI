@@ -6,7 +6,7 @@
 <title>One — Your name</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Fredoka:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;600;700&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&family=Nunito:wght@400;600;800&family=Playfair+Display:wght@600;700;800&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Comic+Neue:wght@400;700&family=Fredoka:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;600;700&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&family=Luckiest+Guy&family=Nunito:wght@400;600;800&family=Playfair+Display:wght@600;700;800&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 <style>
   /* ─── Theme: Candy Chaos ─── */
   :root,
@@ -293,6 +293,181 @@
     --brand-tracking: 0.12em;
     --headline-case: uppercase;
     --scanlines: 0.18;
+  }
+
+  /* ─── Theme: Under Construction ─── */
+  [data-theme="under-construction"] {
+    color-scheme: light;
+    --bg: #ffe14a;
+    --surface: #ffffcc;
+    --text: #0000cc;
+    --muted: #990099;
+    --accent: #ff00aa;
+    --accent-2: #ffe14a;
+    --border: #000000;
+    --danger: #ff0000;
+    --ok: #00cc00;
+    --on-accent: #ffe14a;
+    --radius: 0;
+    --radius-sm: 0;
+    --radius-lg: 0;
+    --shadow: 6px 6px 0 #000000;
+    --shadow-lg: 10px 10px 0 #ff00aa;
+    --font-display: 'Luckiest Guy', 'Comic Sans MS', cursive;
+    --font-body: 'Comic Neue', 'Comic Sans MS', cursive;
+    --border-width: 4px;
+    --letter-spacing: 0.01em;
+    --space-scale: 1.05;
+    --ease: linear;
+    --world-transform: none;
+    --btn-transform-hover: none;
+    --input-inset: inset 2px 2px 0 #808080, inset -1px -1px 0 #ffffff;
+    --atmosphere:
+      repeating-linear-gradient(
+        -45deg,
+        #111111 0 16px,
+        #ffe14a 16px 32px
+      );
+    --ink: var(--text);
+    --ink-soft: var(--muted);
+    --foam: var(--bg);
+    --mist: #ffff99;
+    --dawn: #ffe14a;
+    --ember: #ff00aa;
+    --sea: #0000ee;
+    --sea-deep: #111111;
+    --glow-warm: transparent;
+    --glow-cool: transparent;
+    --particle-warm: 255, 0, 170;
+    --particle-cool: 0, 0, 0;
+    --ripple-a: rgba(255, 0, 170, 0.45);
+    --ripple-b: rgba(255, 225, 74, 0.35);
+    --panel: #ffffff;
+    --panel-solid: #ffffcc;
+    --panel-border: #0000ee;
+    --panel-shadow: 4px 4px 0 #000000;
+    --menu-hover: #ffff00;
+    --menu-active: #00ff00;
+    --veil-blend: multiply;
+    --veil-opacity: 0.06;
+    --brand-tracking: 0.01em;
+    --headline-case: none;
+    --scanlines: 0;
+  }
+
+  [data-theme="under-construction"] .composition {
+    background: #ffffcc;
+    border: 8px ridge #ff66ff;
+    box-shadow: 12px 12px 0 #000000;
+    padding: calc(1.75rem * var(--space-scale)) 1.5rem calc(1.6rem * var(--space-scale));
+    transform: rotate(-0.7deg);
+  }
+
+  [data-theme="under-construction"] .composition::before {
+    content: '★ welcome to my homepage ★';
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.06em;
+    color: #cc00cc;
+  }
+
+  [data-theme="under-construction"] .brand {
+    opacity: 1;
+    color: transparent;
+    background-image: linear-gradient(
+      90deg,
+      #ff0000,
+      #ff8800,
+      #ffe14a,
+      #00aa00,
+      #0000ee,
+      #cc00ff,
+      #ff0000
+    );
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(4px 4px 0 #000000);
+    animation: uc-rainbow 2.8s linear infinite;
+  }
+
+  [data-theme="under-construction"] .brand em {
+    color: #ff0000;
+    -webkit-text-fill-color: #ff0000;
+    background: none;
+  }
+
+  [data-theme="under-construction"] .headline {
+    opacity: 1;
+    color: #ff0000;
+    font-weight: 700;
+    animation: uc-blink 0.9s steps(1, end) infinite;
+  }
+
+  [data-theme="under-construction"] .support {
+    color: #660066;
+    font-weight: 700;
+  }
+
+  [data-theme="under-construction"] .name-label {
+    color: #0000ee;
+    text-decoration: underline;
+  }
+
+  [data-theme="under-construction"] .name-input {
+    background: #ffffff;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border-color: #0000ee;
+    border-radius: 0;
+  }
+
+  [data-theme="under-construction"] .name-form::after {
+    content: 'You are visitor № 0001847';
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #cc0000;
+  }
+
+  [data-theme="under-construction"] .name-submit {
+    background: #33ee33;
+    color: #000000;
+    border: 4px outset #66ff66;
+    border-radius: 0;
+    box-shadow: none;
+    font-family: 'Comic Neue', 'Comic Sans MS', cursive;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+
+  [data-theme="under-construction"] .name-submit::before {
+    display: none;
+  }
+
+  [data-theme="under-construction"] .name-submit > span::before {
+    content: '★ ';
+  }
+
+  [data-theme="under-construction"] .name-submit:hover,
+  [data-theme="under-construction"] .name-submit:focus-visible {
+    background: #ffff00;
+    border-style: outset;
+  }
+
+  [data-theme="under-construction"] .name-submit:active {
+    border-style: inset;
+    transform: none;
+  }
+
+  @keyframes uc-rainbow {
+    from { background-position: 0% 50%; }
+    to { background-position: 200% 50%; }
+  }
+
+  @keyframes uc-blink {
+    0%, 45% { opacity: 1; }
+    50%, 100% { opacity: 0.2; }
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -1140,6 +1315,8 @@
     .flip-cube-inner,
     [data-theme="upside-down-world"] .world,
     [data-theme="crt"] .world,
+    [data-theme="under-construction"] .brand,
+    [data-theme="under-construction"] .headline,
     .scanlines {
       animation: none !important;
     }
@@ -1150,6 +1327,16 @@
     }
     [data-theme="upside-down-world"] .world {
       transform: rotate(180deg);
+    }
+    [data-theme="under-construction"] .brand {
+      color: #0000cc;
+      background: none;
+      -webkit-text-fill-color: #0000cc;
+      filter: none;
+    }
+    [data-theme="under-construction"] .brand em {
+      color: #ff0000;
+      -webkit-text-fill-color: #ff0000;
     }
     .cube.is-animating {
       transition: none !important;
@@ -1280,6 +1467,12 @@
       name: 'CRT Terminal',
       hint: 'Phosphor green',
       swatch: 'linear-gradient(180deg, #0a120a, #33ff66)',
+    },
+    {
+      id: 'under-construction',
+      name: 'Under Construction',
+      hint: 'Best viewed in Netscape',
+      swatch: 'repeating-linear-gradient(-45deg, #111 0 4px, #ffe14a 4px 8px)',
     },
   ];
 
